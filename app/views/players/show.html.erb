@@ -9,3 +9,5 @@
   <li>Decks: <%=  %></li>
   <li>Pod's Joined: <%=  %></li>
 </ul>
+
+<%= button_to "Add a Deck", "/players/#{@player.id}/decks/new", method: :get, data: { turbo: false } %>
