@@ -17,7 +17,7 @@ RSpec.describe "Register Player Page", type: :feature do
       fill_in :name, with: "Gargos"
       fill_in :username, with: "The Vicious Watcher"
       click_on "Submit"
-      save_and_open_page
+
       expect(page).to have_content("Gargos's Page")
     end
   end
