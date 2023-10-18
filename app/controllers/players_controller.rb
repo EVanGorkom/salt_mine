@@ -4,8 +4,8 @@ class PlayersController < ApplicationController
     if player.save
       redirect_to "/players/#{player.id}"
     else
-      # flash[:alert] = "Unable to register, Please choose a unique username."
-      # redirect_to "/players/new"
+      flash[:alert] = "Unable to register, Please choose a unique username."
+      redirect_to "/players/new"
     end
   end
 
