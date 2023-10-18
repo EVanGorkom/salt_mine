@@ -6,5 +6,8 @@ Rails.application.routes.draw do
 
   resources :welcome, only: [:index]
 
-  resources :players, only: [:create, :new, :show]
+  resources :players, only: [:create, :new, :show] do
+    resources :decks, only: [:new]
+  end
+
 end
