@@ -3,4 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  resources :welcome, only: [:index]
+
+  resources :players, only: [:create, :new, :show] do
+    resources :decks, only: [:new]
+  end
+
 end
