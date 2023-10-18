@@ -12,6 +12,9 @@ RSpec.describe "Welcome Page", type: :feature do
       visit welcome_index_path
 
       expect(page).to have_button("Register as a new player")
+      click_on "Register as a new player"
+
+      expect(current_path).to eq "/players/new"
     end
 
     it "A link to take me back to the Welcome Page" do
