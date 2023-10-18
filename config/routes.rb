@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :welcome, only: [:index]
-  resources :register, only: [:index]
+
+  resources :players, only: [:create, :new, :show]
 end
